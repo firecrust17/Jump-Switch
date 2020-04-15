@@ -12,15 +12,15 @@ public class sceneLoader : MonoBehaviour
 	}
 
 	public void QuitGame(){
-		Application.Quit();
+		Application.Quit(); 
 	}
 
 	public void restartLevel(){
-		Application.LoadLevel(Application.loadedLevel);
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 
 	public void nextLevel(){
-		Application.LoadLevel(Application.loadedLevel + 1);
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 
 }
